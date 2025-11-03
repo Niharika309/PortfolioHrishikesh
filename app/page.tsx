@@ -6,6 +6,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  Phone,
   ArrowUpRight,
   Sun,
   Moon,
@@ -523,18 +524,15 @@ const CallStackCard = ({ project, index, totalCards }: { project: any; index: nu
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link target="_blank" href={project.demo}>
-                <MagneticButton className="flex items-center gap-2">
-                  View Project
-                  <ArrowUpRight className="w-4 h-4" />
-                </MagneticButton>
-              </Link>
-              <Link target="_blank" href={project.github}>
-                <MagneticButton variant="outline" className="flex items-center gap-2">
-                  <Github className="w-4 h-4" />
-                  Code
-                </MagneticButton>
-              </Link>
+              {project.demo && (
+                <Link target="_blank" href={project.demo}>
+                  <MagneticButton className="flex items-center gap-2">
+                    View Project
+                    <ArrowUpRight className="w-4 h-4" />
+                  </MagneticButton>
+                </Link>
+              )}
+
             </div>
           </div>
 
@@ -595,7 +593,7 @@ export default function Portfolio() {
         "A full-stack e-commerce platform with advanced product search, secure payments, and scalable microservices architecture built using Angular, Spring Boot, Redis, and AWS, delivering seamless shopping experiences and high-performance API interactions.",
       image: "/ecommerce.png",
       tags: ["Angular", "Spring Boot", "AWS", "MySQL", "Redis", "Elasticsearch"],
-      demo: "https://expanse-tracker-redis.netlify.app/",
+      demo: "",
       github: "https://github.com/priyanshtiwari001/full-stack-expanse-tracker",
     },
     {
@@ -605,7 +603,7 @@ export default function Portfolio() {
         "MediLink is a smart healthcare system connecting patients and hospitals through automation and real-time updates. It centralizes records, enhances data security, and streamlines operations—improving decision-making, reducing manual tasks, and delivering a faster, more reliable healthcare experience.",
       image: "/health.png",
       tags: ["Angular", "Spring Boot", "PostgreSQL", "Azure", "Kubernetes", "Microservices"],
-      demo: "https://www.npmjs.com/package/authease",
+      demo: "",
       github: "https://www.npmjs.com/package/authease",
     },
     {
@@ -615,7 +613,7 @@ export default function Portfolio() {
         "A secure and scalable banking platform offering account management, fund transfers, and loan services through a microservices-based architecture. It delivers real-time transaction processing, 99% uptime, and seamless user experience with robust authentication, faster deployments, and optimized performance for modern digital banking operations.",
       image: "/internet.png",
       tags: ["Spring Boot", "Microservices", "React.js/Next.js", "AWS (EC2, RDS, Docker)", "Spring Security & JWT"],
-      demo: "https://skai-lama-ques.netlify.app",
+      demo: "",
       github: "https://github.com/priyanshtiwari001/lama-podcast",
     },
     {
@@ -625,7 +623,7 @@ export default function Portfolio() {
         "Deployed a scalable inventory management system using containerized microservices with real-time monitoring and automated CI/CD pipelines on Azure.",
       image: "/cloud.png",
       tags: ["Java", "Spring Boot", "Kubernetes", "Azure Cloud"],
-      demo: "https://fast-react-pizza-v3.netlify.app/",
+      demo: "",
       github: "https://github.com/priyanshtiwari001/fact-react-pizza",
     },
   ]
@@ -728,9 +726,9 @@ export default function Portfolio() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
-              The human-centered{" "}
+              Java{" "}
               <span className="relative">
-                web
+                Full Stack
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
@@ -738,7 +736,7 @@ export default function Portfolio() {
                   className="absolute bottom-2 left-0 h-1 bg-green-300 -z-10"
                 />
               </span>{" "}
-              developer
+              Developer
             </h1>
 
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
@@ -823,6 +821,80 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Core Skills Section */}
+      <section className="py-20 px-6 relative z-10 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100 relative"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              Core Skills
+              <motion.div
+                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: "100px" }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+            </motion.h2>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+            {[
+              "Backend Development",
+              "Web Application Development",
+              "API Development",
+              "Object-Oriented Programming",
+              "Frontend Technologies",
+              "Database Management",
+              "Testing & Debugging",
+              "Agile Methodologies",
+              "Cloud & DevOps",
+              "Version Control & Collaboration",
+              "Problem-Solving & Analysis",
+              "Technical Documentation"
+            ].map((skill, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.08,
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
+                className="group relative bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 text-slate-700 dark:text-slate-300 px-6 py-3 rounded-xl text-sm font-medium border border-slate-200 dark:border-slate-600 hover:border-transparent hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-green-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 via-green-400/5 to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                <span className="relative z-10 group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors duration-300">
+                  {skill}
+                </span>
+                <motion.div
+                  className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-400 via-green-400 to-purple-400"
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "100%" }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Articles Section */}
       <section id="articles" className="py-20 px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -832,7 +904,7 @@ export default function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Latest Articles</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Uploading Video</h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Sharing my learning journey and insights about web development, programming, and technology.
             </p>
@@ -961,7 +1033,7 @@ export default function Portfolio() {
             transition={{ delay: 0.4 }}
             className="flex justify-center gap-6 mb-12"
           >
-            <CleanButton variant="accent" className="px-8 py-4 text-base" href="mailto:priyanshu108tiwari@gmail.com">
+            <CleanButton variant="accent" className="px-8 py-4 text-base" href="mailto:Hrishikesh.baroori@gmail.com">
               Get In Touch
             </CleanButton>
           </motion.div>
@@ -974,9 +1046,9 @@ export default function Portfolio() {
             className="flex justify-center gap-8"
           >
             {[
-              { icon: <Github className="w-5 h-5" />, label: "GitHub", href: "https://github.com/priyanshtiwari001" },
-              { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", href: "https://linkedin.com/in/priyanshtiwari001" },
-              { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:priyanshu108tiwari@gmail.com" },
+              { icon: <Phone className="w-5 h-5" />, label: "Phone", href: "tel:+13163001938" },
+              { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", href: "https://linkedin.com/in/hrishikesh-sharma-baroori" },
+              { icon: <Mail className="w-5 h-5" />, label: "Email", href: "mailto:Hrishikesh.baroori@gmail.com" },
             ].map((social, index) => (
               <CleanButton target="blank" key={index} variant="ghost" className="p-4" href={social.href} aria-label={social.label}>
                 {social.icon}
