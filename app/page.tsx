@@ -588,9 +588,9 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Full Stack E-Commerce Platform",
-      year: "2025",
+      year: "Jan 2019 – Jun 2019",
       description:
-        "A full-stack e-commerce platform with advanced product search, secure payments, and scalable microservices architecture built using Angular, Spring Boot, Redis, and AWS, delivering seamless shopping experiences and high-performance API interactions.",
+        "A comprehensive e-commerce platform designed to deliver a smooth and secure online shopping experience. It offers seamless product browsing, cart management, and order tracking, supported by a scalable architecture that ensures high performance and reliability. The platform provides advanced search and personalized user interactions while maintaining strong data security and high availability through optimized design and efficient deployment strategies.",
       image: "/ecommerce.png",
       tags: ["Angular", "Spring Boot", "AWS", "MySQL", "Redis", "Elasticsearch"],
       demo: "",
@@ -598,9 +598,9 @@ export default function Portfolio() {
     },
     {
       title: "Healthcare Management System",
-      year: "2025",
+      year: "Jul 2019 – Oct 2020",
       description:
-        "MediLink is a smart healthcare system connecting patients and hospitals through automation and real-time updates. It centralizes records, enhances data security, and streamlines operations—improving decision-making, reducing manual tasks, and delivering a faster, more reliable healthcare experience.",
+        "An advanced insurance claims management system built to streamline policy creation, claims processing, and settlement workflows. The application delivers a seamless experience through automated workflows, real-time dashboards, and intelligent document handling that significantly reduce manual effort. Designed for scalability and reliability, it supports complex reporting, real-time analytics, and secure document management while maintaining high availability and optimized performance under heavy user loads.",
       image: "/health.png",
       tags: ["Angular", "Spring Boot", "PostgreSQL", "Azure", "Kubernetes", "Microservices"],
       demo: "",
@@ -608,24 +608,15 @@ export default function Portfolio() {
     },
     {
       title: "Internet Banking Platform",
-      year: "2025",
+      year: "Aug 2024 – Present",
       description:
-        "A secure and scalable banking platform offering account management, fund transfers, and loan services through a microservices-based architecture. It delivers real-time transaction processing, 99% uptime, and seamless user experience with robust authentication, faster deployments, and optimized performance for modern digital banking operations.",
+        "A scalable banking application designed to manage core financial operations such as account management, transaction processing, and loan services. The system ensures high reliability and security through robust authentication, role-based access control, and optimized API design. With a responsive interface and strong backend integration, it delivers seamless performance and exceptional user experience. Deployed on cloud infrastructure with automated testing and CI/CD pipelines, the platform achieves high availability, faster deployments, and efficient monitoring for smooth end-to-end operations.",
       image: "/internet.png",
       tags: ["Spring Boot", "Microservices", "React.js/Next.js", "AWS (EC2, RDS, Docker)", "Spring Security & JWT"],
       demo: "",
       github: "https://github.com/priyanshtiwari001/lama-podcast",
     },
-    {
-      title: "Cloud-Based Inventory Management",
-      year: "2024",
-      description:
-        "Deployed a scalable inventory management system using containerized microservices with real-time monitoring and automated CI/CD pipelines on Azure.",
-      image: "/cloud.png",
-      tags: ["Java", "Spring Boot", "Kubernetes", "Azure Cloud"],
-      demo: "",
-      github: "https://github.com/priyanshtiwari001/fact-react-pizza",
-    },
+
   ]
 
   const articles = [
@@ -679,11 +670,11 @@ export default function Portfolio() {
             animate={{ opacity: 1, x: 0 }}
             className="font-semibold text-slate-900 dark:text-slate-100"
           >
-            Hrishikesh Sharma
+            Hrishikesh Sharma Baroori
           </motion.div>
 
           <nav className="hidden md:flex space-x-8">
-            {["Work", "Articles", "About", "Contact"].map((item, index) => (
+            {["Work", "About", "Contact"].map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -726,7 +717,7 @@ export default function Portfolio() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
-              Java{" "}
+              Java-Powered{" "}
               <span className="relative">
                 Full Stack
                 <motion.div
@@ -804,8 +795,7 @@ export default function Portfolio() {
               <div className="flex flex-col items-center">
                 <div className="w-8 h-1 bg-black dark:bg-white mb-1"></div>
                 <div className="w-8 h-1 bg-gray-500 mb-1"></div>
-                <div className="w-8 h-1 bg-gray-400 mb-1"></div>
-                <div className="w-8 h-1 bg-gray-300"></div>
+                <div className="w-8 h-1 bg-gray-400"></div>
               </div>
               <span>Call Stack (LIFO)</span>
             </div>
@@ -835,7 +825,7 @@ export default function Portfolio() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              Core Skills
+              Tech Stack & Expertise
               <motion.div
                 className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 rounded-full"
                 initial={{ width: 0 }}
@@ -845,21 +835,39 @@ export default function Portfolio() {
             </motion.h2>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
-              "Backend Development",
-              "Web Application Development",
-              "API Development",
-              "Object-Oriented Programming",
-              "Frontend Technologies",
-              "Database Management",
-              "Testing & Debugging",
-              "Agile Methodologies",
-              "Cloud & DevOps",
-              "Version Control & Collaboration",
-              "Problem-Solving & Analysis",
-              "Technical Documentation"
-            ].map((skill, index) => (
+              {
+                icon: "💻",
+                title: "Core Java & Backend",
+                skills: ["Java 8/11, OOP", "Collections", "Exception Handling", "Multithreading", "REST APIs"]
+              },
+              {
+                icon: "🚀",
+                title: "DevOps & Infrastructure Basics",
+                skills: ["GitHub Actions, Jenkins basics", "Basic Terraform", "Application logs, Basic metrics", "Cloud platforms, Application servers"]
+              },
+              {
+                icon: "⚛️",
+                title: "Frontend Development",
+                skills: ["React.js, Next.js", "TypeScript", "JavaScript (ES6+)", "HTML", "CSS, Tailwind", "Redux"]
+              },
+              {
+                icon: "🗄️",
+                title: "Database & Data Management",
+                skills: ["MySQL, PostgreSQL", "MongoDB", "ER Diagrams", "Normalization, SQL"]
+              },
+              {
+                icon: "☁️",
+                title: "Cloud Platforms & Services",
+                skills: ["AWS (EC2, S3, RDS, Lambda)", "Azure, GCP", "Docker, Kubernetes"]
+              },
+              {
+                icon: "🛠️",
+                title: "Tools & Version Control",
+                skills: ["Git, GitHub, Postman", "Maven, IntelliJ IDEA", "VS Code"]
+              }
+            ].map((category, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -876,13 +884,27 @@ export default function Portfolio() {
                   y: -5,
                   transition: { duration: 0.2 }
                 }}
-                className="group relative bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 text-slate-700 dark:text-slate-300 px-6 py-3 rounded-xl text-sm font-medium border border-slate-200 dark:border-slate-600 hover:border-transparent hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden"
+                className="group relative bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 p-6 rounded-xl border border-slate-200 dark:border-slate-600 hover:border-transparent hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-green-400/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 via-green-400/5 to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
-                <span className="relative z-10 group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors duration-300">
-                  {skill}
-                </span>
+
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">{category.icon}</span>
+                    <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors duration-300">
+                      {category.title}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div key={skillIndex} className="text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors duration-300">
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 <motion.div
                   className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-400 via-green-400 to-purple-400"
                   initial={{ width: 0 }}
@@ -895,42 +917,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Articles Section */}
-      <section id="articles" className="py-20 px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Uploading Video</h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Sharing my learning journey and insights about web development, programming, and technology.
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {articles.map((article, index) => (
-              <ArticleCard key={index} article={article} index={index} />
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Link target="blank" href="https://medium.com/@priyanshu108tiwari">
-              <CleanButton variant="outline">
-                View All Articles
-                <ArrowUpRight className="w-4 h-4 ml-2" />
-              </CleanButton>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
 
       {/* About Section */}
       <section id="about" className="py-20 px-6 relative z-10">
@@ -954,15 +941,15 @@ export default function Portfolio() {
                 className="space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed"
               >
                 <p>
-                  Hi, I’m Hrishikesh Sharma — a full-stack developer with a strong focus on building scalable and high-performing web applications. I have 3+ years of experience working with Java, Spring Boot, Angular, and React, creating reliable systems with clean architecture and strong backend foundations.
+                  Hi, I’m Hrishikesh Sharma Baroori— Recent graduate with a strong foundation in full-stack Java development and hands-on experience building scalable web applications across diverse domains, including Banking, Healthcare, Insurance, and Retail. Through academic projects and internships, I've gained practical exposure to developing complete end-to-end solutions using modern Java frameworks, RESTful services, and responsive frontend architectures. My focus is on writing clean, maintainable code and delivering high-performance applications that align with real-world business needs.
 
                 </p>
                 <p>
-                  I enjoy crafting modern UIs that are fast, responsive, and intuitive while ensuring robust backend services through microservices, RESTful APIs, and database optimization. I’ve also worked with cloud platforms like Azure and AWS, focusing on deployment automation and scalability.
+                  I'm passionate about continuous learning and emerging technologies, with particular interest in cloud-native and microservices-based systems. Experienced in agile development, Git workflows, and collaborative coding environments, I enjoy solving complex problems and transforming ideas into efficient software solutions. I’ve also worked with cloud platforms like Azure and AWS, focusing on deployment automation and scalability.
                 </p>
-                <p>
+                {/* <p>
                   I’m passionate about solving real-world problems with technology — building products that are not only functional but also deliver a great user experience.
-                </p>
+                </p> */}
               </motion.div>
             </div>
 
