@@ -990,6 +990,53 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Why Hire Me Section */}
+      <section className="py-20 px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-8 text-slate-900 dark:text-slate-100"
+          >
+            Why Hire Me?
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12"
+          >
+            A quick look at my journey, values, and what I bring to your team.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="relative max-w-3xl mx-auto"
+          >
+            <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-slate-300 dark:bg-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-slate-600 dark:text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm">
+                    Video player ready for your introduction video
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -1048,8 +1095,8 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-slate-200 dark:border-slate-700 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500 dark:text-slate-400">© 2025 Priyanshu Tiwari. All rights reserved.</p>
-          <p className="text-sm text-slate-500 dark:text-slate-400">Built with Next.js & Framer Motion</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400">© 2025 Hrishikesh Sharma Baroori. All rights reserved.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400">Built with Next.js, Tailwind CSS & Framer Motion</p>
         </div>
       </footer>
     </div>
