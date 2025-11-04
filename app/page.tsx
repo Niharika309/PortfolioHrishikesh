@@ -717,9 +717,9 @@ export default function Portfolio() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
-              Java-Powered{" "}
+              Turning Ideas into{" "}
               <span className="relative">
-                Full Stack
+                Scalable Java
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
@@ -727,7 +727,7 @@ export default function Portfolio() {
                   className="absolute bottom-2 left-0 h-1 bg-green-300 -z-10"
                 />
               </span>{" "}
-              Developer
+              Applications
             </h1>
 
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
