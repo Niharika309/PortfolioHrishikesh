@@ -654,7 +654,7 @@ export default function Portfolio() {
       period: "Always",
       description:
         "Built hands-on projects to strengthen expertise in Java, Spring Boot, Angular, and cloud technologies like Azure and AWS. Focused on mastering microservices, scalable system design, and modern UI development while consistently improving code quality, performance, and problem-solving skills.",
-    },
+    }
   ]
 
   return (
@@ -703,77 +703,128 @@ export default function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-8"
-          >
-            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              Open to opportunities
+      <section className="pt-32 pb-20 px-6 relative z-10 min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="mb-8"
+              >
+                <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  Open to opportunities
+                </div>
+
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
+                  Turning Ideas into{" "}
+                  <span className="relative">
+                    Scalable Java
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: "100%" }}
+                      transition={{ delay: 1, duration: 1 }}
+                      className="absolute bottom-2 left-0 h-1 bg-green-300 -z-10"
+                    />
+                  </span>{" "}
+                  Applications
+                </h1>
+
+                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                  Engineering ideas into reality Where front-end creativity and back-end precision meet to craft digital excellence.
+                </p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
+                >
+                  <CleanButton variant="accent" className="px-8 py-4 text-base" href="/#work">
+                    My Projects
+                  </CleanButton>
+                  <CleanButton variant="outline" className="px-8 py-4 text-base" href="#contact">
+                    Let's Connect
+                  </CleanButton>
+                </motion.div>
+              </motion.div>
+
+
+
+              {/* Tech Stack */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="flex flex-wrap justify-center lg:justify-start gap-6 mt-16"
+              >
+                {[
+                  { icon: <Code className="w-5 h-5" />, name: "Frontend" },
+                  { icon: <Database className="w-5 h-5" />, name: "Backend" },
+                  { icon: <Palette className="w-5 h-5" />, name: "Cloud & DevOps" },
+                  { icon: <Globe className="w-5 h-5" />, name: "System Design" },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1 + index * 0.1 }}
+                    className="flex items-center gap-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-3 rounded-lg shadow-sm"
+                  >
+                    <div className="text-slate-600 dark:text-slate-400">{item.icon}</div>
+                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{item.name}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
-              Turning Ideas into{" "}
-              <span className="relative">
-                Scalable Java
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ delay: 1, duration: 1 }}
-                  className="absolute bottom-2 left-0 h-1 bg-green-300 -z-10"
-                />
-              </span>{" "}
-              Applications
-            </h1>
-
-            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Engineering ideas into reality Where front-end creativity and back-end precision meet to craft digital excellence.
-            </p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <CleanButton variant="accent" className="px-8 py-4 text-base" href="/#work">
-                My Projects
-              </CleanButton>
-              <CleanButton variant="outline" className="px-8 py-4 text-base" href="#contact">
-                Let's Connect
-              </CleanButton>
-            </motion.div>
-          </motion.div>
-
-          {/* Tech Stack */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex flex-wrap justify-center gap-6 mt-16"
-          >
-            {[
-              { icon: <Code className="w-5 h-5" />, name: "Frontend" },
-              { icon: <Database className="w-5 h-5" />, name: "Backend" },
-              { icon: <Palette className="w-5 h-5" />, name: "Cloud & DevOps" },
-              { icon: <Globe className="w-5 h-5" />, name: "System Design" },
-            ].map((item, index) => (
+            {/* Right Column - Video Section */}
+            <div className="flex-1 flex items-center justify-center">
               <motion.div
-                key={item.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1 + index * 0.1 }}
-                className="flex items-center gap-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-3 rounded-lg shadow-sm"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="w-full max-w-lg -mt-[200px]"
               >
-                <div className="text-slate-600 dark:text-slate-400">{item.icon}</div>
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{item.name}</span>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  className="text-2xl font-semibold text-center mb-8 text-slate-900 dark:text-slate-100"
+                >
+                  🎥 Why Hire Me??
+                </motion.h3>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.9, duration: 0.5 }}
+                  className="relative"
+                >
+                  <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-slate-300 dark:bg-slate-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                          <svg className="w-8 h-8 text-slate-600 dark:text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                        <p className="text-slate-500 dark:text-slate-400 text-lg font-medium mb-2">
+                          Introduction Video
+                        </p>
+                        <p className="text-slate-400 dark:text-slate-500 text-sm">
+                          Ready for your video content
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </motion.div>
-            ))}
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -990,53 +1041,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Why Hire Me Section */}
-      <section className="py-20 px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-8 text-slate-900 dark:text-slate-100"
-          >
-            Why Hire Me?
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12"
-          >
-            A quick look at my journey, values, and what I bring to your team.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="relative max-w-3xl mx-auto"
-          >
-            <div className="aspect-video bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-slate-300 dark:bg-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-slate-600 dark:text-slate-400" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm">
-                    Video player ready for your introduction video
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -1102,3 +1106,5 @@ export default function Portfolio() {
     </div>
   )
 }
+
+
